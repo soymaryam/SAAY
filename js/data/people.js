@@ -1,0 +1,4 @@
+/* Fictional name pools, deterministic random helper R() and name builders. */
+const FF='Noura|نورة;Reem|ريم;Lama|لمى;Hessa|حصة;Dana|دانة;Sara|سارة;Joud|جود;Maha|مها;Hind|هند;Lujain|لجين;Abeer|عبير;Shahad|شهد;Razan|رزان;Ghada|غادة;Amal|أمل;Rawan|روان'.split(';'),MM='Faisal|فيصل;Khalid|خالد;Sultan|سلطان;Turki|تركي;Omar|عمر;Nawaf|نواف;Saud|سعود;Yazeed|يزيد;Bader|بدر;Majed|ماجد;Fahad|فهد;Ziyad|زياد;Rayan|ريان;Talal|طلال;Abdulaziz|عبدالعزيز;Mansour|منصور'.split(';'),LN2='Alharbi|الحربي;Alqahtani|القحطاني;Alzahrani|الزهراني;Almutairi|المطيري;Alshehri|الشهري;Aldosari|الدوسري;Alotaibi|العتيبي;Alghamdi|الغامدي;Alsubaie|السبيعي;Alyami|اليامي;Alharthi|الحارثي;Almalki|المالكي;Alanazi|العنزي;Alshammari|الشمري;Albalawi|البلوي;Alsulami|السلمي'.split(';');
+const R=(i,m,o=0)=>Math.floor(Math.abs(Math.sin(i*12.9898+o*78.233)*43758.5453)%1*m);
+const nm=(a,b)=>{const[x,y]=a.split('|'),[p,q]=b.split('|');return x+' '+p+'|'+y+' '+q},pn=(i,o=0)=>nm(FF[R(i,16,o+1)],LN2[R(i,16,o+2)]);

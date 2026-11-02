@@ -1,0 +1,14 @@
+{
+  "name": "saay-marketplace",
+  "version": "1.0.0",
+  "description": "SAAY (سعي): bilingual (English/Arabic) service marketplace front-end prototype for Saudi Arabia. Plain HTML, CSS and JavaScript, no build step.",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "check": "node scripts/check-syntax.js",
+    "build": "node scripts/build-single-file.js",
+    "test": "python tests/smoke_test.py"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["marketplace", "rtl", "arabic", "saudi-arabia", "vanilla-js"]
+}
